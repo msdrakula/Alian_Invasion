@@ -31,28 +31,14 @@ class Ship():
 		if self.moving_right and self.rect.right < self.screen_rect.right: # Перемещение вправо
 			self.x += self.settings.ship_speed # Скорость перемещения
 
-			# self.rect.x += 1
-
 		if self.moving_left and self.rect.left > 0: # Перемещение влево
 			self.x -= self.settings.ship_speed # Скорость перемещения
-
-			# self.rect.x -= 1
 
 		if self.moving_up and self.screen_rect.top < self.rect.top: # Перемещение вверх
 			self.y -= self.settings.ship_speed # Скорость перемещения
 
-		# if self.moving_up and self.rect.top < self.screen_rect.top: # Перемещение вверх
-		# 	self.y -= self.settings.ship_speed # Скорость перемещения
-
-			# self.rect.y -= 1
-
 		if self.moving_down and self.screen_rect.bottom > self.rect.bottom: # Перемещение вниз
 			self.y += self.settings.ship_speed # Скорость перемещения
-
-		# if self.moving_down and self.rect.bottom > 0: # Перемещение вниз
-		# 	self.y += self.settings.ship_speed # Скорость перемещения
-
-			# self.rect.y += 1
 
 		#Обновление атрибута rect на основании self.x
 		self.rect.x = self.x
