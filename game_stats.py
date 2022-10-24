@@ -11,6 +11,12 @@ class GameStats():
 		# #Игра Alien Invasion запускается в активном состоянии
 		# self.game_active = True
 
+		#Рекорд не должен сбрасываться
+		self.high_score = 0
+
 	def reset_stats(self):
 		"""Иницализирует статистику, изменяющуюся в ходе игры"""
 		self.ships_left = self.settings.ship_limit
+		self.score = 0
+		self.level = 1
+
